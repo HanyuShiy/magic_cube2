@@ -1,16 +1,9 @@
 # ninja log v6
 9	85	1754254592227202579	CMakeFiles/magic_cube2.dir/angle.cpp.o	b226c1958dce503e
-9	1045	1754253003634619281	CMakeFiles/magic_cube2.dir/main.cpp.o	9755eccd6c439f20
-8	77	1754254949885161695	CMakeFiles/magic_cube2.dir/position.cpp.o	a624a6b36662e073
-77	162	1754254949953887763	magic_cube2	1fd28c46a87c95c8
-9	69	1754254949886300435	CMakeFiles/magic_cube2.dir/orientation.cpp.o	d22736486d095492
-10	73	1754254949886792415	CMakeFiles/magic_cube2.dir/cubelet.cpp.o	f0e5b21733e9581a
-19	97	1754256791345331110	CMakeFiles/magic_cube2.dir/cubelet.cpp.o	f0e5b21733e9581a
-7	57	1754256834512704678	CMakeFiles/magic_cube2.dir/orientation.cpp.o	d22736486d095492
-8	68	1754256834513269946	CMakeFiles/magic_cube2.dir/cubelet_face.cpp.o	4866446025b885cb
-8	65	1754256858737804168	CMakeFiles/magic_cube2.dir/cubelet.cpp.o	f0e5b21733e9581a
-11	98	1754256890452584359	CMakeFiles/magic_cube2.dir/cubelet.cpp.o	f0e5b21733e9581a
-10	98	1754256890451347921	CMakeFiles/magic_cube2.dir/position.cpp.o	a624a6b36662e073
-12	100	1754256890453222688	CMakeFiles/magic_cube2.dir/colored_cubelet.cpp.o	e9cbfb657c1bb6ed
-8	57	1754256981700926100	CMakeFiles/magic_cube2.dir/orientation.cpp.o	d22736486d095492
 57	132	1754256981749956182	magic_cube2	7efd85d277eb3852
+8	57	1754256981700926100	CMakeFiles/magic_cube2.dir/orientation.cpp.o	d22736486d095492
+10	98	1754256890451347921	CMakeFiles/magic_cube2.dir/position.cpp.o	a624a6b36662e073
+9	1045	1754253003634619281	CMakeFiles/magic_cube2.dir/main.cpp.o	9755eccd6c439f20
+12	100	1754256890453222688	CMakeFiles/magic_cube2.dir/colored_cubelet.cpp.o	e9cbfb657c1bb6ed
+11	98	1754256890452584359	CMakeFiles/magic_cube2.dir/cubelet.cpp.o	f0e5b21733e9581a
+8	68	1754256834513269946	CMakeFiles/magic_cube2.dir/cubelet_face.cpp.o	4866446025b885cb
