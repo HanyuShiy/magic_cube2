@@ -1,5 +1,6 @@
 #include "orientation.h"
 #include "color.h"
+
 class CubeletFace
 {
     Orientation orientation;

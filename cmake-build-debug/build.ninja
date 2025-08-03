@@ -91,6 +91,13 @@ build CMakeFiles/magic_cube2.dir/cubelet_face.cpp.o: CXX_COMPILER__magic_cube2_u
   OBJECT_DIR = CMakeFiles/magic_cube2.dir
   OBJECT_FILE_DIR = CMakeFiles/magic_cube2.dir
 
+build CMakeFiles/magic_cube2.dir/colored_cubelet.cpp.o: CXX_COMPILER__magic_cube2_unscanned_Debug /Users/hanyushi/code/magic_cube2/colored_cubelet.cpp || cmake_object_order_depends_target_magic_cube2
+  DEP_FILE = CMakeFiles/magic_cube2.dir/colored_cubelet.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -fcolor-diagnostics
+  INCLUDES = -I/Users/hanyushi/code/magic_cube2/.
+  OBJECT_DIR = CMakeFiles/magic_cube2.dir
+  OBJECT_FILE_DIR = CMakeFiles/magic_cube2.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target magic_cube2
@@ -99,7 +106,7 @@ build CMakeFiles/magic_cube2.dir/cubelet_face.cpp.o: CXX_COMPILER__magic_cube2_u
 #############################################
 # Link the executable magic_cube2
 
-build magic_cube2: CXX_EXECUTABLE_LINKER__magic_cube2_Debug CMakeFiles/magic_cube2.dir/angle.cpp.o CMakeFiles/magic_cube2.dir/position.cpp.o CMakeFiles/magic_cube2.dir/orientation.cpp.o CMakeFiles/magic_cube2.dir/cubelet.cpp.o CMakeFiles/magic_cube2.dir/main.cpp.o CMakeFiles/magic_cube2.dir/cubelet_face.cpp.o
+build magic_cube2: CXX_EXECUTABLE_LINKER__magic_cube2_Debug CMakeFiles/magic_cube2.dir/angle.cpp.o CMakeFiles/magic_cube2.dir/position.cpp.o CMakeFiles/magic_cube2.dir/orientation.cpp.o CMakeFiles/magic_cube2.dir/cubelet.cpp.o CMakeFiles/magic_cube2.dir/main.cpp.o CMakeFiles/magic_cube2.dir/cubelet_face.cpp.o CMakeFiles/magic_cube2.dir/colored_cubelet.cpp.o
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk
   OBJECT_DIR = CMakeFiles/magic_cube2.dir
   POST_BUILD = :

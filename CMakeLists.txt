@@ -6,9 +6,10 @@ set(CMAKE_CXX_STANDARD 14)
 include_directories(.)
 
 add_executable(magic_cube2
-    angle.cpp
-    position.cpp
-    orientation.cpp
-    cubelet.cpp
-    main.cpp
-        cubelet_face.cpp)
+        angle.cpp
+        position.cpp
+        orientation.cpp
+        cubelet.cpp
+        main.cpp
+        cubelet_face.cpp
+        colored_cubelet.cpp)

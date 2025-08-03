@@ -3,9 +3,9 @@
 class Position
 {
     int x, y, z;
-    Position(int x, int y, int z);
 
 public:
+    Position(int x, int y, int z);
 
     void rotateX(Angle angle);
     void rotateY(Angle angle);

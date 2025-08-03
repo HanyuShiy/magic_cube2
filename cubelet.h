@@ -4,7 +4,6 @@ class Cubelet
 {
     Position position;
 
-    Cubelet(Position position);
-
 public:
+    Cubelet(Position position);
 };
