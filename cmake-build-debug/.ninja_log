@@ -1,0 +1,7 @@
+# ninja log v6
+9	85	1754254592227202579	CMakeFiles/magic_cube2.dir/angle.cpp.o	b226c1958dce503e
+9	1045	1754253003634619281	CMakeFiles/magic_cube2.dir/main.cpp.o	9755eccd6c439f20
+8	77	1754254949885161695	CMakeFiles/magic_cube2.dir/position.cpp.o	a624a6b36662e073
+77	162	1754254949953887763	magic_cube2	1fd28c46a87c95c8
+9	69	1754254949886300435	CMakeFiles/magic_cube2.dir/orientation.cpp.o	d22736486d095492
+10	73	1754254949886792415	CMakeFiles/magic_cube2.dir/cubelet.cpp.o	f0e5b21733e9581a

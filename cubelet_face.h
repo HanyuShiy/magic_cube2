@@ -1,0 +1,18 @@
+#include "orientation.h"
+#include "color.h"
+class CubeletFace
+{
+    Orientation orientation;
+
+    Color color;
+
+public:
+    explicit CubeletFace(Orientation orientation);
+};
+
+const CubeletFace FRONT_ORIENTED({1, 0, 0});
+const CubeletFace BACK_ORIENTED({-1, 0, 0});
+const CubeletFace LEFT_ORIENTED({0, -1, 0});
+const CubeletFace RIGHT_ORIENTED({0, 1, 0});
+const CubeletFace TOP_ORIENTED({0, 0, 1});
+const CubeletFace BOTTOM_ORIENTED({0, 0, -1});
