@@ -5,5 +5,5 @@ class Cubelet
     Position position;
 
 public:
-    Cubelet(Position position);
+    Cubelet(int x, int y, int z);
 };
