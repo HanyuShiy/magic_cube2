@@ -15,4 +15,6 @@ public:
     void rotateXClockwise(Angle angle) override;
     void rotateYClockwise(Angle angle) override;
     void rotateZClockwise(Angle angle) override;
+
+    Color getFaceOn(Orientation orientation) const;
 };

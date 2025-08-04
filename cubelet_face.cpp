@@ -1,7 +1,7 @@
 #include "cubelet_face.h"
 
 CubeletFace::CubeletFace(const Orientation orientation)
-    : orientation(orientation)
+    : orientation(orientation),color(EMPTY)
 {
 }
 
@@ -20,7 +20,18 @@ void CubeletFace::rotateZ(const Angle angle)
     orientation.rotateZ(angle);
 }
 
-void CubeletFace::coloring(const Color color)
+void CubeletFace::coloring(const Orientation orientation, Color color)
 {
-    this->color = color;
+    if (this->orientation == orientation)
+        this->color = color;
+}
+
+Color CubeletFace::getColor() const
+{
+    return this->color;
+}
+
+Orientation CubeletFace::getOrientation() const
+{
+    return this->orientation;
 }

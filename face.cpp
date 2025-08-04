@@ -10,9 +10,9 @@ void Face::print() const
 {
     for (auto& row : colors)
     {
-        for (auto& col : row)      // row&col not really horizontal/vertical?
+        for (auto& color : row)      // row&col not really horizontal/vertical?
         {
-            std::cout << col << " ";
+            std::cout << static_cast<char>(color) << " ";
         }
         std::cout << std::endl;
     }

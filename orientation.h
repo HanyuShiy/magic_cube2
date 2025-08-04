@@ -13,3 +13,11 @@ public:
 
     bool operator==(const Orientation& orientation) const = default;
 };
+
+const auto FRONT_ORIENTED = Orientation{1, 0, 0};
+const auto BACK_ORIENTED = Orientation{-1, 0, 0};
+const auto LEFT_ORIENTED = Orientation{0, -1, 0};
+const auto RIGHT_ORIENTED = Orientation{0, 1, 0};
+const auto TOP_ORIENTED = Orientation{0, 0, 1};
+const auto BOTTOM_ORIENTED = Orientation{0, 0, -1};
+

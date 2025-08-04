@@ -48,4 +48,3 @@ void Cubelet::rotateZClockwise(Angle angle)
 {
     position.rotateZ(angle);
 }
-

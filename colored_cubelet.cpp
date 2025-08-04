@@ -17,32 +17,32 @@ void ColoredCubelet::coloring()
     {
         if (this->onFrontFace())
         {
-            face.coloring(Color::RED);
+            face.coloring(FRONT_ORIENTED, Color::RED);
         }
         if (this->onBackFace())
         {
-            face.coloring(Color::ORANGE);
+            face.coloring(BACK_ORIENTED, Color::ORANGE);
         }
         if (this->onLeftFace())
         {
-            face.coloring(Color::BLUE);
+            face.coloring(LEFT_ORIENTED, Color::BLUE);
         }
         if (this->onRightFace())
         {
-            face.coloring(Color::GREEN);
+            face.coloring(RIGHT_ORIENTED, Color::GREEN);
         }
         if (this->onTopFace())
         {
-            face.coloring(Color::WHITE);
+            face.coloring(TOP_ORIENTED, Color::WHITE);
         }
         if (this->onBottomFace())
         {
-            face.coloring(Color::YELLOW);
+            face.coloring(BOTTOM_ORIENTED,Color::YELLOW);
         }
     }
 }
 
-void ColoredCubelet::rotateXClockwise(Angle angle)
+void ColoredCubelet::rotateXClockwise(const Angle angle)
 {
     Cubelet::rotateXClockwise(angle);
     for (auto& face : cubelet_faces)
@@ -51,7 +51,7 @@ void ColoredCubelet::rotateXClockwise(Angle angle)
     }
 }
 
-void ColoredCubelet::rotateYClockwise(Angle angle)
+void ColoredCubelet::rotateYClockwise(const Angle angle)
 {
     Cubelet::rotateYClockwise(angle);
     for (auto& face : cubelet_faces)
@@ -60,7 +60,7 @@ void ColoredCubelet::rotateYClockwise(Angle angle)
     }
 }
 
-void ColoredCubelet::rotateZClockwise(Angle angle)
+void ColoredCubelet::rotateZClockwise(const Angle angle)
 {
     Cubelet::rotateZClockwise(angle);
     for (auto& face : cubelet_faces)
@@ -68,3 +68,16 @@ void ColoredCubelet::rotateZClockwise(Angle angle)
         face.rotateX(angle);
     }
 }
+
+Color ColoredCubelet::getFaceOn(const Orientation orientation) const
+{
+    for (auto cf : cubelet_faces)
+    {
+        if (cf.getOrientation() == orientation)
+        {
+            return cf.getColor();
+        }
+    }
+    throw;
+}
+

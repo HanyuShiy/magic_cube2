@@ -1,4 +1,5 @@
 #include "cube.h"
+#include <array>
 
 Cube::Cube() : cubelets{
     {1, 1, 0}, {1, 1, 1}, {1, 1, -1},
@@ -13,6 +14,32 @@ Cube::Cube() : cubelets{
 }
 {
     coloring();
+}
+
+Face Cube::getFrontFace()
+{
+    std::array<std::array<Color, 3>, 3> front_face;
+    for (auto& cubelet : cubelets)
+    {
+        if (cubelet.onFrontFace())
+        {
+            front_face[cubelet.position.y + 1][cubelet.position.z + 1] = cubelet.getFaceOn(FRONT_ORIENTED);
+        }
+    }
+    return Face(front_face);
+}
+
+Face Cube::getTopFace()
+{
+    std::array<std::array<Color, 3>, 3> top_face;
+    for (auto& cubelet : cubelets)
+    {
+        if (cubelet.onTopFace())
+        {
+            top_face[cubelet.position.x + 1][cubelet.position.y + 1] = cubelet.getFaceOn(TOP_ORIENTED);
+        }
+    }
+    return Face(top_face);
 }
 
 void Cube::coloring()

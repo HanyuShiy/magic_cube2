@@ -9,6 +9,9 @@ public:
     Cube();
 
     Face getFrontFace();
+    Face getTopFace();
 
     void coloring();
+
+
 };

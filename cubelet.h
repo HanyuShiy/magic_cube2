@@ -2,9 +2,9 @@
 
 class Cubelet
 {
+public:
     Position position;
 
-public:
     Cubelet(int x, int y, int z);
 
     // Alternative: make onxXxFace a boolean variable,
