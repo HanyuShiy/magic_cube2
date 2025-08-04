@@ -56,7 +56,7 @@ void ColoredCubelet::rotateYClockwise(const Angle angle)
     Cubelet::rotateYClockwise(angle);
     for (auto& face : cubelet_faces)
     {
-        face.rotateX(angle);
+        face.rotateY(angle);
     }
 }
 
@@ -65,7 +65,7 @@ void ColoredCubelet::rotateZClockwise(const Angle angle)
     Cubelet::rotateZClockwise(angle);
     for (auto& face : cubelet_faces)
     {
-        face.rotateX(angle);
+        face.rotateZ(angle);
     }
 }
 

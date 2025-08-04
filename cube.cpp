@@ -122,7 +122,7 @@ void Cube::rotateBackClockwise()
     {
         if (cubelet.onBackFace())
         {
-            cubelet.rotateXClockwise(ONE_STEP_CLOCKWISE);
+            cubelet.rotateXClockwise(ONE_STEP_COUNTERCLOCKWISE);
         }
     }
 }
@@ -144,7 +144,7 @@ void Cube::rotateBottomClockwise()
     {
         if (cubelet.onBottomFace())
         {
-            cubelet.rotateZClockwise(ONE_STEP_CLOCKWISE);
+            cubelet.rotateZClockwise(ONE_STEP_COUNTERCLOCKWISE);
         }
     }
 }
@@ -155,7 +155,7 @@ void Cube::rotateLeftClockwise()
     {
         if (cubelet.onLeftFace())
         {
-            cubelet.rotateYClockwise(ONE_STEP_CLOCKWISE);
+            cubelet.rotateYClockwise(ONE_STEP_COUNTERCLOCKWISE);
         }
     }
 }
@@ -164,7 +164,7 @@ void Cube::rotateRightClockwise()
 {
     for (auto& cubelet : cubelets)
     {
-        if (cubelet.onLeftFace())
+        if (cubelet.onRightFace())
         {
             cubelet.rotateYClockwise(ONE_STEP_CLOCKWISE);
         }
