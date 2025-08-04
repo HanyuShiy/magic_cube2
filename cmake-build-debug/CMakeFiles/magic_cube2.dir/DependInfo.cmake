@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/hanyushi/code/magic_cube2/angle.cpp" "CMakeFiles/magic_cube2.dir/angle.cpp.o" "gcc" "CMakeFiles/magic_cube2.dir/angle.cpp.o.d"
   "/Users/hanyushi/code/magic_cube2/colored_cubelet.cpp" "CMakeFiles/magic_cube2.dir/colored_cubelet.cpp.o" "gcc" "CMakeFiles/magic_cube2.dir/colored_cubelet.cpp.o.d"
+  "/Users/hanyushi/code/magic_cube2/cube.cpp" "CMakeFiles/magic_cube2.dir/cube.cpp.o" "gcc" "CMakeFiles/magic_cube2.dir/cube.cpp.o.d"
   "/Users/hanyushi/code/magic_cube2/cubelet.cpp" "CMakeFiles/magic_cube2.dir/cubelet.cpp.o" "gcc" "CMakeFiles/magic_cube2.dir/cubelet.cpp.o.d"
   "/Users/hanyushi/code/magic_cube2/cubelet_face.cpp" "CMakeFiles/magic_cube2.dir/cubelet_face.cpp.o" "gcc" "CMakeFiles/magic_cube2.dir/cubelet_face.cpp.o.d"
   "/Users/hanyushi/code/magic_cube2/face.cpp" "CMakeFiles/magic_cube2.dir/face.cpp.o" "gcc" "CMakeFiles/magic_cube2.dir/face.cpp.o.d"

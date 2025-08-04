@@ -177,6 +177,30 @@ colored_cubelet.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/magic_cube2.dir/build.make CMakeFiles/magic_cube2.dir/colored_cubelet.cpp.s
 .PHONY : colored_cubelet.cpp.s
 
+cube.o: cube.cpp.o
+.PHONY : cube.o
+
+# target to build an object file
+cube.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/magic_cube2.dir/build.make CMakeFiles/magic_cube2.dir/cube.cpp.o
+.PHONY : cube.cpp.o
+
+cube.i: cube.cpp.i
+.PHONY : cube.i
+
+# target to preprocess a source file
+cube.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/magic_cube2.dir/build.make CMakeFiles/magic_cube2.dir/cube.cpp.i
+.PHONY : cube.cpp.i
+
+cube.s: cube.cpp.s
+.PHONY : cube.s
+
+# target to generate assembly for a file
+cube.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/magic_cube2.dir/build.make CMakeFiles/magic_cube2.dir/cube.cpp.s
+.PHONY : cube.cpp.s
+
 cubelet.o: cubelet.cpp.o
 .PHONY : cubelet.o
 
@@ -336,6 +360,9 @@ help:
 	@echo "... colored_cubelet.o"
 	@echo "... colored_cubelet.i"
 	@echo "... colored_cubelet.s"
+	@echo "... cube.o"
+	@echo "... cube.i"
+	@echo "... cube.s"
 	@echo "... cubelet.o"
 	@echo "... cubelet.i"
 	@echo "... cubelet.s"

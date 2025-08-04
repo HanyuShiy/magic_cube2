@@ -11,6 +11,37 @@ ColoredCubelet::ColoredCubelet(int x, int y, int z)
 {
 }
 
+void ColoredCubelet::coloring()
+{
+    for (auto& face : cubelet_faces)
+    {
+        if (this->onFrontFace())
+        {
+            face.coloring(Color::RED);
+        }
+        if (this->onBackFace())
+        {
+            face.coloring(Color::ORANGE);
+        }
+        if (this->onLeftFace())
+        {
+            face.coloring(Color::BLUE);
+        }
+        if (this->onRightFace())
+        {
+            face.coloring(Color::GREEN);
+        }
+        if (this->onTopFace())
+        {
+            face.coloring(Color::WHITE);
+        }
+        if (this->onBottomFace())
+        {
+            face.coloring(Color::YELLOW);
+        }
+    }
+}
+
 void ColoredCubelet::rotateXClockwise(Angle angle)
 {
     Cubelet::rotateXClockwise(angle);

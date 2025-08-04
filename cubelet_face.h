@@ -16,6 +16,8 @@ public:
     void rotateY(Angle angle);
     void rotateZ(Angle angle);
 
+    void coloring(Color color);
+
 };
 
 const CubeletFace FRONT_ORIENTED({1, 0, 0});

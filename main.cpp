@@ -1,9 +1,7 @@
-#include <iostream>
-
-#include "angle.h"
+#include "cube.h"
 
 int main()
 {
-    Angle a(1);
-    ZERO_ANGLE;
+    auto cube = Cube();
+
 }

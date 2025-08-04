@@ -10,4 +10,6 @@ public:
     void rotateX(Angle angle);
     void rotateY(Angle angle);
     void rotateZ(Angle angle);
+
+    bool operator==(const Orientation& orientation) const = default;
 };

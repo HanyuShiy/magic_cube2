@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/magic_cube2.dir/angle.cpp.o.d"
   "CMakeFiles/magic_cube2.dir/colored_cubelet.cpp.o"
   "CMakeFiles/magic_cube2.dir/colored_cubelet.cpp.o.d"
+  "CMakeFiles/magic_cube2.dir/cube.cpp.o"
+  "CMakeFiles/magic_cube2.dir/cube.cpp.o.d"
   "CMakeFiles/magic_cube2.dir/cubelet.cpp.o"
   "CMakeFiles/magic_cube2.dir/cubelet.cpp.o.d"
   "CMakeFiles/magic_cube2.dir/cubelet_face.cpp.o"

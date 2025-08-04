@@ -1,7 +1,5 @@
 #include <array>
 
-#include "colored_cubelet.h"
-
 #include "color.h"
 
 class Face
