@@ -29,6 +29,58 @@ Face Cube::getFrontFace()
     return Face(front_face);
 }
 
+Face Cube::getLeftFace()
+{
+    std::array<std::array<Color, 3>, 3> left_face;
+    for (auto& cubelet : cubelets)
+    {
+        if (cubelet.onLeftFace())
+        {
+            left_face[cubelet.position.x + 1][cubelet.position.z + 1] = cubelet.getFaceOn(LEFT_ORIENTED);
+        }
+    }
+    return Face(left_face);
+}
+
+Face Cube::getRightFace()
+{
+    std::array<std::array<Color, 3>, 3> right_face;
+    for (auto& cubelet : cubelets)
+    {
+        if (cubelet.onRightFace())
+        {
+            right_face[cubelet.position.x + 1][cubelet.position.z + 1] = cubelet.getFaceOn(RIGHT_ORIENTED);
+        }
+    }
+    return Face(right_face);
+}
+
+Face Cube::getBackFace()
+{
+    std::array<std::array<Color, 3>, 3> back_face;
+    for (auto& cubelet : cubelets)
+    {
+        if (cubelet.onBackFace())
+        {
+            back_face[cubelet.position.y + 1][cubelet.position.z + 1] = cubelet.getFaceOn(BACK_ORIENTED);
+        }
+    }
+    return Face(back_face);
+}
+
+Face Cube::getBottomFace()
+{
+    std::array<std::array<Color, 3>, 3> bottom_face;
+    for (auto& cubelet : cubelets)
+    {
+        if (cubelet.onBottomFace())
+        {
+            bottom_face[cubelet.position.x + 1][cubelet.position.y + 1] = cubelet.getFaceOn(BOTTOM_ORIENTED);
+        }
+    }
+    return Face(bottom_face);
+}
+
 Face Cube::getTopFace()
 {
     std::array<std::array<Color, 3>, 3> top_face;
@@ -41,6 +93,8 @@ Face Cube::getTopFace()
     }
     return Face(top_face);
 }
+
+
 
 
 void Cube::coloring()

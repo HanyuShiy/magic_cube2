@@ -9,6 +9,10 @@ public:
     Cube();
 
     Face getFrontFace();
+    Face getLeftFace();
+    Face getRightFace();
+    Face getBackFace();
+    Face getBottomFace();
     Face getTopFace();
 
     void coloring();
@@ -19,5 +23,4 @@ public:
     void rotateBottomClockwise();
     void rotateLeftClockwise();
     void rotateRightClockwise();
-
 };
