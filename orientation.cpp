@@ -22,8 +22,8 @@ void Orientation::rotateY(const Angle angle)
 
 void Orientation::rotateZ(const Angle angle)
 {
-    const int newY = x * Angle::sin(angle) + y * Angle::cos(angle);
-    const int newZ = -y * Angle::sin(angle) + z * Angle::cos(angle);
+    const int newY = -x * Angle::sin(angle) + y * Angle::cos(angle);
+    const int newX = -y * Angle::sin(angle) + x * Angle::cos(angle);
     this->y = newY;
-    this->z = newZ;
+    this->x = newX;
 }

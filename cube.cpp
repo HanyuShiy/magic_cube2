@@ -32,7 +32,7 @@ Face Cube::getFrontFace()
 Face Cube::getTopFace()
 {
     std::array<std::array<Color, 3>, 3> top_face;
-    for (auto& cubelet : cubelets)
+    for (const auto& cubelet : cubelets)
     {
         if (cubelet.onTopFace())
         {
@@ -41,6 +41,7 @@ Face Cube::getTopFace()
     }
     return Face(top_face);
 }
+
 
 void Cube::coloring()
 {
@@ -54,7 +55,7 @@ void Cube::rotateFrontClockwise()
 {
     for (auto& cubelet : cubelets)
     {
-        if (cubelet.getFaceOn(FRONT_ORIENTED) != EMPTY)
+        if (cubelet.onFrontFace())
         {
             cubelet.rotateXClockwise(ONE_STEP_CLOCKWISE);
         }
@@ -65,7 +66,7 @@ void Cube::rotateBackClockwise()
 {
     for (auto& cubelet : cubelets)
     {
-        if (cubelet.getFaceOn(BACK_ORIENTED) != EMPTY)
+        if (cubelet.onBackFace())
         {
             cubelet.rotateXClockwise(ONE_STEP_CLOCKWISE);
         }
@@ -76,7 +77,7 @@ void Cube::rotateTopClockwise()
 {
     for (auto& cubelet : cubelets)
     {
-        if (cubelet.getFaceOn(TOP_ORIENTED) != EMPTY)
+        if (cubelet.onTopFace())
         {
             cubelet.rotateZClockwise(ONE_STEP_CLOCKWISE);
         }
@@ -87,7 +88,7 @@ void Cube::rotateBottomClockwise()
 {
     for (auto& cubelet : cubelets)
     {
-        if (cubelet.getFaceOn(BOTTOM_ORIENTED) != EMPTY)
+        if (cubelet.onBottomFace())
         {
             cubelet.rotateZClockwise(ONE_STEP_CLOCKWISE);
         }
@@ -98,7 +99,7 @@ void Cube::rotateLeftClockwise()
 {
     for (auto& cubelet : cubelets)
     {
-        if (cubelet.getFaceOn(LEFT_ORIENTED) != EMPTY)
+        if (cubelet.onLeftFace())
         {
             cubelet.rotateYClockwise(ONE_STEP_CLOCKWISE);
         }
@@ -109,7 +110,7 @@ void Cube::rotateRightClockwise()
 {
     for (auto& cubelet : cubelets)
     {
-        if (cubelet.getFaceOn(RIGHT_ORIENTED) != EMPTY)
+        if (cubelet.onLeftFace())
         {
             cubelet.rotateYClockwise(ONE_STEP_CLOCKWISE);
         }
