@@ -1,3 +1,5 @@
+#include "angle.h"
+
 #include "orientation.h"
 #include "color.h"
 
@@ -9,6 +11,11 @@ class CubeletFace
 
 public:
     explicit CubeletFace(Orientation orientation);
+
+    void rotateX(Angle angle);
+    void rotateY(Angle angle);
+    void rotateZ(Angle angle);
+
 };
 
 const CubeletFace FRONT_ORIENTED({1, 0, 0});

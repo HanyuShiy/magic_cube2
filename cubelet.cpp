@@ -34,3 +34,18 @@ bool Cubelet::onBottomFace() const
     return this->position.z == -1;
 }
 
+void Cubelet::rotateXClockwise(Angle angle)
+{
+    position.rotateX(angle);
+}
+
+void Cubelet::rotateYClockwise(Angle angle)
+{
+    position.rotateY(angle);
+}
+
+void Cubelet::rotateZClockwise(Angle angle)
+{
+    position.rotateZ(angle);
+}
+

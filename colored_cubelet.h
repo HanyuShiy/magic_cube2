@@ -8,4 +8,8 @@ public:
     CubeletFace cubelet_faces[6];
 
     ColoredCubelet(int x, int y, int z);
+
+    void rotateXClockwise(Angle angle) override;
+    void rotateYClockwise(Angle angle) override;
+    void rotateZClockwise(Angle angle) override;
 };

@@ -630,6 +630,7 @@ CMakeFiles/magic_cube2.dir/face.cpp.o: \
   /Users/hanyushi/code/magic_cube2/./position.h \
   /Users/hanyushi/code/magic_cube2/./angle.h \
   /Users/hanyushi/code/magic_cube2/cubelet_face.h \
+  /Users/hanyushi/code/magic_cube2/angle.h \
   /Users/hanyushi/code/magic_cube2/orientation.h \
   /Users/hanyushi/code/magic_cube2/color.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/iostream \

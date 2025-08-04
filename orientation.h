@@ -1,7 +1,13 @@
+#include "angle.h"
+
 class Orientation
 {
-    int a, b, c;
+    int x, y, z;
 
 public:
-    Orientation(int a, int b, int c);
+    Orientation(int x, int y, int z);
+
+    void rotateX(Angle angle);
+    void rotateY(Angle angle);
+    void rotateZ(Angle angle);
 };

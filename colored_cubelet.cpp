@@ -10,3 +10,30 @@ ColoredCubelet::ColoredCubelet(int x, int y, int z)
       }
 {
 }
+
+void ColoredCubelet::rotateXClockwise(Angle angle)
+{
+    Cubelet::rotateXClockwise(angle);
+    for (auto& face : cubelet_faces)
+    {
+        face.rotateX(angle);
+    }
+}
+
+void ColoredCubelet::rotateYClockwise(Angle angle)
+{
+    Cubelet::rotateYClockwise(angle);
+    for (auto& face : cubelet_faces)
+    {
+        face.rotateX(angle);
+    }
+}
+
+void ColoredCubelet::rotateZClockwise(Angle angle)
+{
+    Cubelet::rotateZClockwise(angle);
+    for (auto& face : cubelet_faces)
+    {
+        face.rotateX(angle);
+    }
+}

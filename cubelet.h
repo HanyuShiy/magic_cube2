@@ -16,7 +16,7 @@ public:
     bool onTopFace() const;
     bool onBottomFace() const;
 
-    void rotateXClockwise(Angle angle);
-    void rotateYClockwise(Angle angle);
-    void rotateZClockwise(Angle angle);
+    virtual void rotateXClockwise(Angle angle);
+    virtual void rotateYClockwise(Angle angle);
+    virtual void rotateZClockwise(Angle angle);
 };
