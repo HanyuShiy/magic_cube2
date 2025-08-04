@@ -2,9 +2,9 @@
 
 class Position
 {
+public:
     int x, y, z;
 
-public:
     Position(int x, int y, int z);
 
     void rotateX(Angle angle);

@@ -4,9 +4,8 @@
 
 class ColoredCubelet : public Cubelet
 {
+public:
     CubeletFace cubelet_faces[6];
 
     ColoredCubelet(int x, int y, int z);
-public:
-
 };
