@@ -13,5 +13,11 @@ public:
 
     void coloring();
 
+    void rotateFrontClockwise();
+    void rotateBackClockwise();
+    void rotateTopClockwise();
+    void rotateBottomClockwise();
+    void rotateLeftClockwise();
+    void rotateRightClockwise();
 
 };

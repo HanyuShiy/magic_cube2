@@ -49,3 +49,69 @@ void Cube::coloring()
         cubelet.coloring();
     }
 }
+
+void Cube::rotateFrontClockwise()
+{
+    for (auto& cubelet : cubelets)
+    {
+        if (cubelet.getFaceOn(FRONT_ORIENTED) != EMPTY)
+        {
+            cubelet.rotateXClockwise(ONE_STEP_CLOCKWISE);
+        }
+    }
+}
+
+void Cube::rotateBackClockwise()
+{
+    for (auto& cubelet : cubelets)
+    {
+        if (cubelet.getFaceOn(BACK_ORIENTED) != EMPTY)
+        {
+            cubelet.rotateXClockwise(ONE_STEP_CLOCKWISE);
+        }
+    }
+}
+
+void Cube::rotateTopClockwise()
+{
+    for (auto& cubelet : cubelets)
+    {
+        if (cubelet.getFaceOn(TOP_ORIENTED) != EMPTY)
+        {
+            cubelet.rotateZClockwise(ONE_STEP_CLOCKWISE);
+        }
+    }
+}
+
+void Cube::rotateBottomClockwise()
+{
+    for (auto& cubelet : cubelets)
+    {
+        if (cubelet.getFaceOn(BOTTOM_ORIENTED) != EMPTY)
+        {
+            cubelet.rotateZClockwise(ONE_STEP_CLOCKWISE);
+        }
+    }
+}
+
+void Cube::rotateLeftClockwise()
+{
+    for (auto& cubelet : cubelets)
+    {
+        if (cubelet.getFaceOn(LEFT_ORIENTED) != EMPTY)
+        {
+            cubelet.rotateYClockwise(ONE_STEP_CLOCKWISE);
+        }
+    }
+}
+
+void Cube::rotateRightClockwise()
+{
+    for (auto& cubelet : cubelets)
+    {
+        if (cubelet.getFaceOn(RIGHT_ORIENTED) != EMPTY)
+        {
+            cubelet.rotateYClockwise(ONE_STEP_CLOCKWISE);
+        }
+    }
+}
