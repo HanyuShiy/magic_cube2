@@ -16,3 +16,12 @@ ColoredCubelet::ColoredCubelet(const int x, const int y, const int z) :
     })
 {
 }
+
+void ColoredCubelet::coloring(const Color color)
+{
+    for (auto& face : cubelet_faces)
+    {
+        face.coloring(color);
+    }
+
+}

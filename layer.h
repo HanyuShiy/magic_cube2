@@ -5,7 +5,6 @@
 #ifndef MAGIC_CUBE2_LAYER_H
 #define MAGIC_CUBE2_LAYER_H
 #include <functional>
-
 #include "cubelet.h"
 #include "orientation.h"
 
@@ -31,11 +30,11 @@ const Layer x0Layer([](const Cubelet& cubelet) { return cubelet.position.x == 0;
 const Layer y0Layer([](const Cubelet& cubelet) { return cubelet.position.y == 0; }, {0, 1, 0});
 const Layer z0Layer([](const Cubelet& cubelet) { return cubelet.position.z == 0; }, {0, 0, 1});
 
-const Layer& FRONT_LAYER = xP1;
-const Layer& BACK_LAYER = xN1;
-const Layer& RIGHT_LAYER = yP1;
-const Layer& LEFT_LAYER = yN1;
-const Layer& TOP_LAYER = zP1;
-const Layer& BOTTOM_LAYER = zN1;
+inline const Layer& FRONT_LAYER = xP1;
+inline const Layer& BACK_LAYER = xN1;
+inline const Layer& RIGHT_LAYER = yP1;
+inline const Layer& LEFT_LAYER = yN1;
+inline const Layer& TOP_LAYER = zP1;
+inline const Layer& BOTTOM_LAYER = zN1;
 
 #endif //MAGIC_CUBE2_LAYER_H

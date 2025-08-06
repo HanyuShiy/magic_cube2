@@ -15,6 +15,8 @@ class ColoredCubelet final : public Cubelet
 
 public:
     ColoredCubelet(int x, int y, int z);
+
+    void coloring(Color color);
 };
 
 
