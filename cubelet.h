@@ -11,11 +11,12 @@ class Cubelet
     Position position;
 
 public:
+    virtual ~Cubelet() = default;
     Cubelet(int x, int y, int z);
 
-    void rotateXClockwise(Angle angle);
-    void rotateYClockwise(Angle angle);
-    void rotateZClockwise(Angle angle);
+    virtual void rotateXClockwise(Angle angle);
+    virtual void rotateYClockwise(Angle angle);
+    virtual void rotateZClockwise(Angle angle);
 };
 
 

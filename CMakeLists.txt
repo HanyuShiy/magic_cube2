@@ -12,4 +12,9 @@ add_executable(magic_cube2
         orientation.h
         cubelet.cpp
         cubelet.h
-        main.cpp)
+        main.cpp
+        cubelet_face.cpp
+        cubelet_face.h
+        colored_cubelet.cpp
+        colored_cubelet.h
+        Color.h)
