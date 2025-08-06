@@ -8,9 +8,9 @@
 
 class Cubelet
 {
+public:
     Position position;
 
-public:
     virtual ~Cubelet() = default;
     Cubelet(int x, int y, int z);
 

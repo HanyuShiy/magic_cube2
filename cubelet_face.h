@@ -22,4 +22,5 @@ public:
 };
 
 
+
 #endif //MAGIC_CUBE2_CUBELET_FACE_H
