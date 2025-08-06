@@ -49,8 +49,16 @@ void Cube::coloring()
         {
             cubelet.coloring(Color::YELLOW);
         }
-
-
     }
+}
 
+void Cube::print(Layer surfaceLayer)
+{
+    std::array<Color, 6> surface;
+    for (auto& cubelet : cubelets)
+    {
+        if (surfaceLayer.contains(cubelet))
+        {
+        }
+    }
 }

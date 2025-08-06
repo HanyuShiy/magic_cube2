@@ -7,6 +7,7 @@
 #include <array>
 
 #include "colored_cubelet.h"
+#include "layer.h"
 
 
 class Cube
@@ -17,6 +18,8 @@ public:
     explicit Cube();
 
     void coloring();
+
+    void print(Layer surfaceLayer);
 };
 
 

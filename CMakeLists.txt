@@ -21,4 +21,6 @@ add_executable(magic_cube2
         cube.cpp
         cube.h
         layer.cpp
-        layer.h)
+        layer.h
+        face.cpp
+        face.h)

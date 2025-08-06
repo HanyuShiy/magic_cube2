@@ -11,9 +11,9 @@
 
 class ColoredCubelet final : public Cubelet
 {
+public:
     std::array<CubeletFace, 6> cubelet_faces;
 
-public:
     ColoredCubelet(int x, int y, int z);
 
     void coloring(Color color);
