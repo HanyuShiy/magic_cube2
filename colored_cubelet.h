@@ -9,7 +9,6 @@
 #include "cubelet.h"
 #include "cubelet_face.h"
 
-
 class ColoredCubelet final : public Cubelet
 {
     std::array<CubeletFace, 6> cubelet_faces;

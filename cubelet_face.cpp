@@ -22,3 +22,9 @@ void CubeletFace::rotateZClockwise(Angle angle)
 {
     orientation.rotateZClockwise(angle);
 }
+
+void CubeletFace::coloring(Color color)
+{
+    this->color = color;
+}
+

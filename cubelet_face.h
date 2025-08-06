@@ -19,8 +19,9 @@ public:
     void rotateXClockwise(Angle angle);
     void rotateYClockwise(Angle angle);
     void rotateZClockwise(Angle angle);
-};
 
+    void coloring(Color color);
+};
 
 
 #endif //MAGIC_CUBE2_CUBELET_FACE_H

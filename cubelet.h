@@ -9,9 +9,9 @@
 class Cubelet
 {
 public:
+    virtual ~Cubelet() = default;
     Position position;
 
-    virtual ~Cubelet() = default;
     Cubelet(int x, int y, int z);
 
     virtual void rotateXClockwise(Angle angle);
