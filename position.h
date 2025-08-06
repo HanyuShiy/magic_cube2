@@ -7,12 +7,12 @@
 #include "angle.h"
 
 
-class position
+class Position
 {
     int x, y, z;
 
 public:
-    position(int x, int y, int z);
+    Position(int x, int y, int z);
 
     void rotateXClockwise(Angle angle);
     void rotateYClockwise(Angle angle);
