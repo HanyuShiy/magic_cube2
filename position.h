@@ -9,15 +9,13 @@
 
 class Position
 {
-    int x, y, z;
-
 public:
+    int x, y, z;
     Position(int x, int y, int z);
 
     void rotateXClockwise(Angle angle);
     void rotateYClockwise(Angle angle);
     void rotateZClockwise(Angle angle);
-
 };
 
 
