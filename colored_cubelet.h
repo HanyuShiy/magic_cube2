@@ -18,7 +18,11 @@ public:
 
     void coloring(Orientation orientation, Color color);
 
-    Color getFaceOn(Orientation orientation) const;
+    [[nodiscard]] Color getFaceOn(Orientation orientation) const;
+
+    void rotateXClockwise(Angle angle) override;
+    void rotateYClockwise(Angle angle) override;
+    void rotateZClockwise(Angle angle) override;
 };
 
 

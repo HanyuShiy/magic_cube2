@@ -20,12 +20,16 @@ public:
 
     void coloring();
 
-    Surface getFront() const;
-    Surface getBack() const;
-    Surface getRight() const;
-    Surface getLeft() const;
-    Surface getTop() const;
-    Surface getBottom() const;
+    [[nodiscard]] Surface getFront() const;
+    [[nodiscard]] Surface getBack() const;
+    [[nodiscard]] Surface getRight() const;
+    [[nodiscard]] Surface getLeft() const;
+    [[nodiscard]] Surface getTop() const;
+    [[nodiscard]] Surface getBottom() const;
+
+    void rotateAroundX(const Layer& layer, Angle angle);
+    void rotateAroundY(const Layer& layer, Angle angle);
+    void rotateAroundZ(const Layer& layer, Angle angle);
 };
 
 

@@ -54,7 +54,7 @@ void Cube::coloring()
 
 Surface Cube::getFront() const
 {
-    std::array<std::array<Color, 3>, 3> surface;
+    std::array<std::array<Color, 3>, 3> surface{};
     for (const auto& cubelet : cubelets)
     {
         if (FRONT_LAYER.contains(cubelet))
@@ -67,7 +67,7 @@ Surface Cube::getFront() const
 
 Surface Cube::getBack() const
 {
-    std::array<std::array<Color, 3>, 3> surface;
+    std::array<std::array<Color, 3>, 3> surface{};
     for (const auto& cubelet : cubelets)
     {
         if (BACK_LAYER.contains(cubelet))
@@ -80,7 +80,7 @@ Surface Cube::getBack() const
 
 Surface Cube::getRight() const
 {
-    std::array<std::array<Color, 3>, 3> surface;
+    std::array<std::array<Color, 3>, 3> surface{};
     for (const auto& cubelet : cubelets)
     {
         if (RIGHT_LAYER.contains(cubelet))
@@ -93,7 +93,7 @@ Surface Cube::getRight() const
 
 Surface Cube::getLeft() const
 {
-    std::array<std::array<Color, 3>, 3> surface;
+    std::array<std::array<Color, 3>, 3> surface{};
     for (const auto& cubelet : cubelets)
     {
         if (LEFT_LAYER.contains(cubelet))
@@ -106,7 +106,7 @@ Surface Cube::getLeft() const
 
 Surface Cube::getTop() const
 {
-    std::array<std::array<Color, 3>, 3> surface;
+    std::array<std::array<Color, 3>, 3> surface{};
     for (const auto& cubelet : cubelets)
     {
         if (TOP_LAYER.contains(cubelet))
@@ -119,7 +119,7 @@ Surface Cube::getTop() const
 
 Surface Cube::getBottom() const
 {
-    std::array<std::array<Color, 3>, 3> surface;
+    std::array<std::array<Color, 3>, 3> surface{};
     for (const auto& cubelet : cubelets)
     {
         if (BOTTOM_LAYER.contains(cubelet))
@@ -128,4 +128,38 @@ Surface Cube::getBottom() const
         }
     }
     return Surface(surface);
+}
+
+void Cube::rotateAroundX(const Layer& layer, const Angle angle)
+{
+    // rotate layer around positive X-axis clockwise
+    for (auto& cubelet : cubelets)
+    {
+        if (layer.contains(cubelet))
+        {
+            cubelet.rotateXClockwise(angle);
+        }
+    }
+}
+
+void Cube::rotateAroundY(const Layer& layer, const Angle angle)
+{
+    for (auto& cubelet : cubelets)
+    {
+        if (layer.contains(cubelet))
+        {
+            cubelet.rotateYClockwise(angle);
+        }
+    }
+}
+
+void Cube::rotateAroundZ(const Layer& layer, const Angle angle)
+{
+    for (auto& cubelet : cubelets)
+    {
+        if (layer.contains(cubelet))
+        {
+            cubelet.rotateZClockwise(angle);
+        }
+    }
 }

@@ -4,20 +4,24 @@
 
 int main()
 {
-    const auto cube = Cube();
+    auto cube = Cube();
+    cube.rotateAroundX(FRONT_LAYER, Clockwise_90);
+    cube.rotateAroundX(FRONT_LAYER, Counterclockwise_90);
+    cube.rotateAroundZ(TOP_LAYER, Clockwise_90);
+    cube.rotateAroundZ(BOTTOM_LAYER, Clockwise_90);
 
     std::cout << "Top:\n";
-     cube.getTop().print();
+    cube.getTop().print();
     std::cout << "Left:\n";
-     cube.getLeft().print();
+    cube.getLeft().print();
     std::cout << "Front:\n";
-     cube.getFront().print();
+    cube.getFront().print();
     std::cout << "Right:\n";
-     cube.getRight().print();
+    cube.getRight().print();
     std::cout << "Back:\n";
-     cube.getBack().print();
+    cube.getBack().print();
     std::cout << "Bottom:\n";
-     cube.getBottom().print();
+    cube.getBottom().print();
 
     return 0;
 }

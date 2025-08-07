@@ -12,5 +12,5 @@ public:
 
 };
 
-const auto POSITIVE_90 = Angle{1};
-const auto NEGATIVE_90 = Angle{-1};
+const auto Clockwise_90 = Angle{1};
+const auto Counterclockwise_90 = Angle{-1};

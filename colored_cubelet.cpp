@@ -39,3 +39,30 @@ Color ColoredCubelet::getFaceOn(const Orientation orientation) const
     }
     throw;
 }
+
+void ColoredCubelet::rotateXClockwise(const Angle angle)
+{
+    Cubelet::rotateXClockwise(angle);
+    for (auto& face : cubelet_faces)
+    {
+        face.rotateXClockwise(angle);
+    }
+}
+
+void ColoredCubelet::rotateYClockwise(const Angle angle)
+{
+    Cubelet::rotateYClockwise(angle);
+    for (auto& face : cubelet_faces)
+    {
+        face.rotateYClockwise(angle);
+    }
+}
+
+void ColoredCubelet::rotateZClockwise(const Angle angle)
+{
+    Cubelet::rotateZClockwise(angle);
+    for (auto& face : cubelet_faces)
+    {
+        face.rotateZClockwise(angle);
+    }
+}
