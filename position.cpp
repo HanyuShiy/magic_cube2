@@ -30,7 +30,7 @@ void Position::rotateZClockwise(const Angle angle)
 {
     // Rotates clockwise when viewed from the positive z-axis
     const int newY = y * Angle::cos(angle) - x * Angle::sin(angle);
-    const int newX = -y * Angle::sin(angle) + x * Angle::cos(angle);
+    const int newX = y * Angle::sin(angle) + x * Angle::cos(angle);
     this->x = newX;
     this->y = newY;
 }

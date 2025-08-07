@@ -5,9 +5,8 @@
 int main()
 {
     auto cube = Cube();
-    cube.rotateLayer(FRONT_LAYER, Clockwise_90);
-    cube.rotateLayer(FRONT_LAYER, Counterclockwise_90);
-    cube.rotateLayer(y0Layer, Clockwise_90);
+    cube.rotateLayer(TOP_LAYER, Clockwise_90);
+    cube.rotateLayer(BOTTOM_LAYER, Clockwise_90);
 
     std::cout << "Top:\n";
     cube.getTop().print();

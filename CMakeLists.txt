@@ -9,18 +9,10 @@ add_executable(magic_cube2
         angle.cpp
         position.cpp
         orientation.cpp
-        orientation.h
         cubelet.cpp
-        cubelet.h
         main.cpp
         cubelet_face.cpp
-        cubelet_face.h
         colored_cubelet.cpp
-        colored_cubelet.h
-        Color.h
         cube.cpp
-        cube.h
         layer.cpp
-        layer.h
-        surface.cpp
-        surface.h)
+        surface.cpp)
