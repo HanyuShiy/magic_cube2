@@ -14,9 +14,9 @@ class Surface
     std::array<std::array<Color, 3>, 3> colors;
 
 public:
-    Surface() = default;
+    explicit Surface(const std::array<std::array<Color, 3>, 3>& colors);
 
-    void print();
+    void print() const;
 };
 
 

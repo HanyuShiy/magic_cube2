@@ -14,6 +14,8 @@ class Orientation
 public:
     Orientation(int x, int y, int z);
 
+    bool operator==(const Orientation&) const = default;
+
     void rotateXClockwise(Angle angle);
     void rotateYClockwise(Angle angle);
     void rotateZClockwise(Angle angle);

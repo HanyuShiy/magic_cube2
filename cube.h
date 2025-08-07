@@ -8,6 +8,7 @@
 
 #include "colored_cubelet.h"
 #include "layer.h"
+#include "surface.h"
 
 
 class Cube
@@ -19,7 +20,12 @@ public:
 
     void coloring();
 
-    void print(Layer surfaceLayer);
+    Surface getFront() const;
+    Surface getBack() const;
+    Surface getRight() const;
+    Surface getLeft() const;
+    Surface getTop() const;
+    Surface getBottom() const;
 };
 
 

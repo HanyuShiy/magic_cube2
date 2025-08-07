@@ -5,30 +5,31 @@
 #ifndef MAGIC_CUBE2_LAYER_H
 #define MAGIC_CUBE2_LAYER_H
 #include <functional>
-#include "cubelet.h"
+
+#include "colored_cubelet.h"
 #include "orientation.h"
 
 
 class Layer
 {
 public:
-    std::function<bool(Cubelet& cubelet)> contains;
+    std::function<bool(const ColoredCubelet& cubelet)> contains;
 
-    Layer(const std::function<bool(Cubelet& cubelet)>& contains, Orientation axisVec);
+    Layer(const std::function<bool(const ColoredCubelet& cubelet)>& contains, Orientation axisVec);
 
 private:
     const Orientation axisVec; // positive direction of coordinate axis
 };
 
-const Layer xP1([](const Cubelet& cubelet) { return cubelet.position.x == 1; }, {1, 0, 0});
-const Layer yP1([](const Cubelet& cubelet) { return cubelet.position.y == 1; }, {0, 1, 0});
-const Layer zP1([](const Cubelet& cubelet) { return cubelet.position.z == 1; }, {0, 0, 1});
-const Layer xN1([](const Cubelet& cubelet) { return cubelet.position.x == -1; }, {1, 0, 0});
-const Layer yN1([](const Cubelet& cubelet) { return cubelet.position.y == -1; }, {0, 1, 0});
-const Layer zN1([](const Cubelet& cubelet) { return cubelet.position.z == -1; }, {0, 0, 1});
-const Layer x0Layer([](const Cubelet& cubelet) { return cubelet.position.x == 0; }, {1, 0, 0});
-const Layer y0Layer([](const Cubelet& cubelet) { return cubelet.position.y == 0; }, {0, 1, 0});
-const Layer z0Layer([](const Cubelet& cubelet) { return cubelet.position.z == 0; }, {0, 0, 1});
+const Layer xP1([](const ColoredCubelet& cubelet) { return cubelet.position.x == 1; }, {1, 0, 0});
+const Layer yP1([](const ColoredCubelet& cubelet) { return cubelet.position.y == 1; }, {0, 1, 0});
+const Layer zP1([](const ColoredCubelet& cubelet) { return cubelet.position.z == 1; }, {0, 0, 1});
+const Layer xN1([](const ColoredCubelet& cubelet) { return cubelet.position.x == -1; }, {1, 0, 0});
+const Layer yN1([](const ColoredCubelet& cubelet) { return cubelet.position.y == -1; }, {0, 1, 0});
+const Layer zN1([](const ColoredCubelet& cubelet) { return cubelet.position.z == -1; }, {0, 0, 1});
+const Layer x0Layer([](const ColoredCubelet& cubelet) { return cubelet.position.x == 0; }, {1, 0, 0});
+const Layer y0Layer([](const ColoredCubelet& cubelet) { return cubelet.position.y == 0; }, {0, 1, 0});
+const Layer z0Layer([](const ColoredCubelet& cubelet) { return cubelet.position.z == 0; }, {0, 0, 1});
 
 inline const Layer& FRONT_LAYER = xP1;
 inline const Layer& BACK_LAYER = xN1;

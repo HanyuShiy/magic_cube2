@@ -16,6 +16,9 @@ class CubeletFace
 public:
     CubeletFace(Orientation orientation);
 
+    Orientation get_orientation() const;
+    Color get_color() const;
+
     void rotateXClockwise(Angle angle);
     void rotateYClockwise(Angle angle);
     void rotateZClockwise(Angle angle);

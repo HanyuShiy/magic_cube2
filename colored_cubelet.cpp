@@ -17,11 +17,25 @@ ColoredCubelet::ColoredCubelet(const int x, const int y, const int z) :
 {
 }
 
-void ColoredCubelet::coloring(const Color color)
+void ColoredCubelet::coloring(const Orientation orientation, const Color color)
 {
     for (auto& face : cubelet_faces)
     {
-        face.coloring(color);
+        if (face.get_orientation() == orientation)
+        {
+            face.coloring(color);
+        }
     }
+}
 
+Color ColoredCubelet::getFaceOn(const Orientation orientation) const
+{
+    for (auto& cf : cubelet_faces)
+    {
+        if (cf.get_orientation() == orientation)
+        {
+            return cf.get_color();
+        }
+    }
+    throw;
 }
