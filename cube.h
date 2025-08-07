@@ -27,9 +27,7 @@ public:
     [[nodiscard]] Surface getTop() const;
     [[nodiscard]] Surface getBottom() const;
 
-    void rotateAroundX(const Layer& layer, Angle angle);
-    void rotateAroundY(const Layer& layer, Angle angle);
-    void rotateAroundZ(const Layer& layer, Angle angle);
+    void rotateLayer(const Layer& layer, Angle angle);
 };
 
 

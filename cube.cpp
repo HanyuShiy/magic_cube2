@@ -130,36 +130,25 @@ Surface Cube::getBottom() const
     return Surface(surface);
 }
 
-void Cube::rotateAroundX(const Layer& layer, const Angle angle)
+void Cube::rotateLayer(const Layer& layer, const Angle angle)
 {
     // rotate layer around positive X-axis clockwise
     for (auto& cubelet : cubelets)
     {
         if (layer.contains(cubelet))
         {
-            cubelet.rotateXClockwise(angle);
-        }
-    }
-}
-
-void Cube::rotateAroundY(const Layer& layer, const Angle angle)
-{
-    for (auto& cubelet : cubelets)
-    {
-        if (layer.contains(cubelet))
-        {
-            cubelet.rotateYClockwise(angle);
-        }
-    }
-}
-
-void Cube::rotateAroundZ(const Layer& layer, const Angle angle)
-{
-    for (auto& cubelet : cubelets)
-    {
-        if (layer.contains(cubelet))
-        {
-            cubelet.rotateZClockwise(angle);
+            if (layer.get_axisVec() == X_Axis_POSITIVE)
+            {
+                cubelet.rotateXClockwise(angle);
+            }
+            if (layer.get_axisVec() == Y_Axis_POSITIVE)
+            {
+                cubelet.rotateYClockwise(angle);
+            }
+            if (layer.get_axisVec() == Z_Axis_POSITIVE)
+            {
+                cubelet.rotateZClockwise(angle);
+            }
         }
     }
 }

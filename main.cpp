@@ -5,10 +5,9 @@
 int main()
 {
     auto cube = Cube();
-    cube.rotateAroundX(FRONT_LAYER, Clockwise_90);
-    cube.rotateAroundX(FRONT_LAYER, Counterclockwise_90);
-    cube.rotateAroundZ(TOP_LAYER, Clockwise_90);
-    cube.rotateAroundZ(BOTTOM_LAYER, Clockwise_90);
+    cube.rotateLayer(FRONT_LAYER, Clockwise_90);
+    cube.rotateLayer(FRONT_LAYER, Counterclockwise_90);
+    cube.rotateLayer(y0Layer, Clockwise_90);
 
     std::cout << "Top:\n";
     cube.getTop().print();

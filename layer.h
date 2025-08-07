@@ -17,6 +17,7 @@ public:
 
     Layer(const std::function<bool(const ColoredCubelet& cubelet)>& contains, Orientation axisVec);
 
+    [[nodiscard]] Orientation get_axisVec() const;
 private:
     const Orientation axisVec; // positive direction of coordinate axis
 };

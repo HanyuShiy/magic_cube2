@@ -28,4 +28,8 @@ const auto LEFT_ORIENTED = Orientation(0,-1,0);
 const auto TOP_ORIENTED = Orientation(0,0,1);
 const auto BOTTOM_ORIENTED = Orientation(0,0,-1);
 
+const auto X_Axis_POSITIVE = Orientation(1,0,0);
+const auto Y_Axis_POSITIVE = Orientation(0,1,0);
+const auto Z_Axis_POSITIVE = Orientation(0,0,1);
+
 #endif //MAGIC_CUBE2_ORIENTATION_H

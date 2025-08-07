@@ -9,3 +9,8 @@ Layer::Layer(const std::function<bool(const ColoredCubelet& cubelet)>& contains,
     contains(contains), axisVec(axisVec)
 {
 }
+
+Orientation Layer::get_axisVec() const
+{
+    return axisVec;
+}
