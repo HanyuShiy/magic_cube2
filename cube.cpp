@@ -4,6 +4,8 @@
 
 #include "cube.h"
 
+#include "layer.h"
+
 Cube::Cube() : cubelets({
     ColoredCubelet({1, 1, 1}),
     ColoredCubelet({1, 1, 0}),
@@ -36,12 +38,36 @@ Cube::Cube() : cubelets({
     ColoredCubelet({-1, -1, -1})
 })
 {
+    coloring();
 }
 
 void Cube::coloring()
 {
     for (auto& cubelet : cubelets)
     {
-        // cubelet.coloring();
+        if (frontLayer.contains(cubelet))
+        {
+            cubelet.coloring(FRONT_ORIENTED, RED);
+        }
+        if (backLayer.contains(cubelet))
+        {
+            cubelet.coloring(BACK_ORIENTED, ORANGE);
+        }
+        if (rightLayer.contains(cubelet))
+        {
+            cubelet.coloring(RIGHT_ORIENTED, BLUE);
+        }
+        if (leftLayer.contains(cubelet))
+        {
+            cubelet.coloring(LEFT_ORIENTED, GREEN);
+        }
+        if (topLayer.contains(cubelet))
+        {
+            cubelet.coloring(TOP_ORIENTED, WHITE);
+        }
+        if (bottomLayer.contains(cubelet))
+        {
+            cubelet.coloring(BOTTOM_ORIENTED, YELLOW);
+        }
     }
 }

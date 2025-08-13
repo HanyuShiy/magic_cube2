@@ -12,3 +12,9 @@ void CubeletFace::rotateX(const Angle angle)
 {
     orientation.rotateX(angle);
 }
+
+void CubeletFace::coloring(const Color& color)
+{
+    this->color = color;
+}
+

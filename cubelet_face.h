@@ -10,13 +10,15 @@
 
 class CubeletFace
 {
+public:
     Orientation orientation;
     Color color;
 
-public:
     CubeletFace(Orientation orientation);
 
     void rotateX(Angle angle);
+
+    void coloring(const Color& color);
 };
 
 

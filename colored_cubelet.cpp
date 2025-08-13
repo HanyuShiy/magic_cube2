@@ -18,3 +18,16 @@ ColoredCubelet::ColoredCubelet(Position position) :
     )
 {
 }
+
+void ColoredCubelet::coloring(const Orientation& orientation, const Color& color)
+{
+    for (auto& face : faces)
+    {
+        if (face.orientation == orientation)
+        {
+            face.coloring(color);
+        }
+    }
+}
+
+

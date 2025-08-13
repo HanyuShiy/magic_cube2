@@ -18,6 +18,7 @@ class ColoredCubelet : public Cubelet
 public:
     explicit ColoredCubelet(Position position);
 
+    void coloring(const Orientation& orientation, const Color& color);
 };
 
 
