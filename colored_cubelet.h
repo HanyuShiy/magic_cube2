@@ -17,6 +17,7 @@ class ColoredCubelet : public Cubelet
 
 public:
     explicit ColoredCubelet(Position position);
+
 };
 
 

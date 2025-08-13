@@ -19,4 +19,6 @@ add_executable(magic_cube2
         cubelet_face.h
         color.h
         colored_cubelet.cpp
-        colored_cubelet.h)
+        colored_cubelet.h
+        cube.cpp
+        cube.h)
