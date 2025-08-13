@@ -10,9 +10,14 @@
 class Cubelet
 {
 public:
+    virtual ~Cubelet() = default;
     Position position;
 
     explicit Cubelet(Position position);
+
+    virtual void rotateX(const Angle& angle);
+    virtual void rotateY(const Angle& angle);
+    virtual void rotateZ(const Angle& angle);
 };
 
 

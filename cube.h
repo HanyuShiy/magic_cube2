@@ -7,6 +7,7 @@
 #include <array>
 
 #include "colored_cubelet.h"
+#include "layer.h"
 
 
 class Cube
@@ -17,6 +18,10 @@ public:
     Cube();
 
     void coloring();
+
+    Cube& rotateXClockwise(const Layer& layer, const Angle& angle);
+    Cube& rotateYClockwise(const Layer& layer, const Angle& angle);
+    Cube& rotateZClockwise(const Layer& layer, const Angle& angle);
 };
 
 

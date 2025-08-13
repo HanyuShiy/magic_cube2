@@ -71,3 +71,39 @@ void Cube::coloring()
         }
     }
 }
+
+Cube& Cube::rotateXClockwise(const Layer& layer, const Angle& angle)
+{
+    for (auto& cubelet : cubelets)
+    {
+        if (layer.contains(cubelet))
+        {
+            cubelet.rotateX(angle);
+        }
+    }
+    return *this;
+}
+
+Cube& Cube::rotateYClockwise(const Layer& layer, const Angle& angle)
+{
+    for (auto& cubelet : cubelets)
+    {
+        if (layer.contains(cubelet))
+        {
+            cubelet.rotateY(angle);
+        }
+    }
+    return *this;
+}
+
+Cube& Cube::rotateZClockwise(const Layer& layer, const Angle& angle)
+{
+    for (auto& cubelet : cubelets)
+    {
+        if (layer.contains(cubelet))
+        {
+            cubelet.rotateZ(angle);
+        }
+    }
+    return *this;
+}

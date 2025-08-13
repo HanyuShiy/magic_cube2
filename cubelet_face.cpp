@@ -8,13 +8,22 @@ CubeletFace::CubeletFace(const Orientation orientation) : orientation(orientatio
 {
 }
 
-void CubeletFace::rotateX(const Angle angle)
+void CubeletFace::rotateX(const Angle& angle)
 {
     orientation.rotateX(angle);
+}
+
+void CubeletFace::rotateY(const Angle& angle)
+{
+    orientation.rotateY(angle);
+}
+
+void CubeletFace::rotateZ(const Angle& angle)
+{
+    orientation.rotateZ(angle);
 }
 
 void CubeletFace::coloring(const Color& color)
 {
     this->color = color;
 }
-

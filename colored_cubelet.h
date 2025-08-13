@@ -18,6 +18,10 @@ class ColoredCubelet : public Cubelet
 public:
     explicit ColoredCubelet(Position position);
 
+    void rotateX(const Angle& angle) override;
+    void rotateY(const Angle& angle) override;
+    void rotateZ(const Angle& angle) override;
+
     void coloring(const Orientation& orientation, const Color& color);
 };
 

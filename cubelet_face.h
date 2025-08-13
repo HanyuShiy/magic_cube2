@@ -16,7 +16,9 @@ public:
 
     CubeletFace(Orientation orientation);
 
-    void rotateX(Angle angle);
+    void rotateX(const Angle& angle);
+    void rotateY(const Angle& angle);
+    void rotateZ(const Angle& angle);
 
     void coloring(const Color& color);
 };

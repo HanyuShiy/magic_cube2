@@ -19,6 +19,33 @@ ColoredCubelet::ColoredCubelet(Position position) :
 {
 }
 
+void ColoredCubelet::rotateX(const Angle& angle)
+{
+    Cubelet::rotateX(angle);
+    for (auto& face : faces)
+    {
+        face.rotateX(angle);
+    }
+}
+
+void ColoredCubelet::rotateY(const Angle& angle)
+{
+    Cubelet::rotateY(angle);
+    for (auto& face : faces)
+    {
+        face.rotateY(angle);
+    }
+}
+
+void ColoredCubelet::rotateZ(const Angle& angle)
+{
+    Cubelet::rotateZ(angle);
+    for (auto& face : faces)
+    {
+        face.rotateZ(angle);
+    }
+}
+
 void ColoredCubelet::coloring(const Orientation& orientation, const Color& color)
 {
     for (auto& face : faces)
@@ -29,5 +56,3 @@ void ColoredCubelet::coloring(const Orientation& orientation, const Color& color
         }
     }
 }
-
-
