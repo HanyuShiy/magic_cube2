@@ -4,10 +4,18 @@
 
 #ifndef MAGIC_CUBE2_POSITION_H
 #define MAGIC_CUBE2_POSITION_H
+#include "angle.h"
 
-
-class position
+class Position
 {
+    int x, y, z;
+
+public:
+    Position(int x, int y, int z);
+
+    Position& rotateX(Angle angle);
+    Position& rotateY(Angle angle);
+    Position& rotateZ(Angle angle);
 };
 
 
