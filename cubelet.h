@@ -9,9 +9,9 @@
 
 class Cubelet
 {
+public:
     Position position;
 
-public:
     explicit Cubelet(Position position);
 };
 

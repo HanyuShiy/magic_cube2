@@ -4,7 +4,7 @@
 
 #include "cubelet_face.h"
 
-CubeletFace::CubeletFace(const Orientation orientation) : orientation(orientation)
+CubeletFace::CubeletFace(const Orientation orientation) : orientation(orientation), color(EMPTY)
 {
 }
 

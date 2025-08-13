@@ -4,6 +4,7 @@
 
 #ifndef MAGIC_CUBE2_CUBELET_FACE_H
 #define MAGIC_CUBE2_CUBELET_FACE_H
+#include "color.h"
 #include "orientation.h"
 
 
@@ -11,8 +12,9 @@ class CubeletFace
 {
     Orientation orientation;
     Color color;
+
 public:
-    explicit CubeletFace(Orientation orientation);
+    CubeletFace(Orientation orientation);
 
     void rotateX(Angle angle);
 };
