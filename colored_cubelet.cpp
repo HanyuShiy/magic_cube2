@@ -19,6 +19,18 @@ ColoredCubelet::ColoredCubelet(Position position) :
 {
 }
 
+Color ColoredCubelet::getColorOn(const Orientation& orientation) const
+{
+    for (auto& face : faces)
+    {
+        if (face.orientation == orientation)
+        {
+            return face.color;
+        }
+    }
+    throw;
+}
+
 void ColoredCubelet::rotateX(const Angle& angle)
 {
     Cubelet::rotateX(angle);

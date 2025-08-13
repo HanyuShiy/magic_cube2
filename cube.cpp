@@ -119,3 +119,93 @@ Cube& Cube::rotateClockwiseAngle(const Layer& layer, const Angle& angle)
     }
     return *this;
 }
+
+Face Cube::getFrontFace() const
+{
+    std::array<std::array<Color, 3>, 3> front_face;
+    for (const auto& cubelet : cubelets)
+    {
+        if (frontLayer.contains(cubelet))
+        {
+            front_face[cubelet.position.y + 1][cubelet.position.z + 1] = cubelet.getColorOn(FRONT_ORIENTED);
+        }
+    }
+    return {front_face};
+}
+
+Face Cube::getBackFace() const
+{
+    std::array<std::array<Color, 3>, 3> backFace{};
+    for (const auto& cubelet : cubelets)
+    {
+        if (backLayer.contains(cubelet))
+        {
+            backFace[cubelet.position.y + 1][cubelet.position.z + 1] = cubelet.getColorOn(BACK_ORIENTED);
+        }
+    }
+    return {backFace};
+}
+
+Face Cube::getLeftFace() const
+{
+    std::array<std::array<Color, 3>, 3> leftFace{};
+    for (const auto& cubelet : cubelets)
+    {
+        if (leftLayer.contains(cubelet))
+        {
+            leftFace[cubelet.position.z + 1][cubelet.position.x + 1] = cubelet.getColorOn(LEFT_ORIENTED);
+        }
+    }
+    return {leftFace};
+}
+
+Face Cube::getRightFace() const
+{
+    std::array<std::array<Color, 3>, 3> rightFace{};
+    for (const auto& cubelet : cubelets)
+    {
+        if (rightLayer.contains(cubelet))
+        {
+            rightFace[cubelet.position.x + 1][cubelet.position.z + 1] = cubelet.getColorOn(RIGHT_ORIENTED);
+        }
+    }
+    return {rightFace};
+}
+
+Face Cube::getTopFace() const
+{
+    std::array<std::array<Color, 3>, 3> topFace{};
+    for (const auto& cubelet : cubelets)
+    {
+        if (topLayer.contains(cubelet))
+        {
+            topFace[cubelet.position.x + 1][cubelet.position.y + 1] = cubelet.getColorOn(TOP_ORIENTED);
+        }
+    }
+    return {topFace};
+}
+
+Face Cube::getBottomFace() const
+{
+    std::array<std::array<Color, 3>, 3> bottomFace{};
+    for (const auto& cubelet : cubelets)
+    {
+        if (bottomLayer.contains(cubelet))
+        {
+            bottomFace[cubelet.position.x + 1][cubelet.position.y + 1] = cubelet.getColorOn(BOTTOM_ORIENTED);
+        }
+    }
+    return {bottomFace};
+}
+
+// Face Cube::getFace(const Layer& layer) const
+// {
+//     std::array<std::array<Color, 3>, 3> colors;
+//     for (const auto& cubelet : cubelets)
+//     {
+//         if (layer.contains(cubelet))
+//         {
+//
+//         }
+//     }
+// }

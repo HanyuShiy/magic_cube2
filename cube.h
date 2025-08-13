@@ -7,6 +7,7 @@
 #include <array>
 
 #include "colored_cubelet.h"
+#include "face.h"
 #include "layer.h"
 
 
@@ -24,6 +25,14 @@ public:
     // Cube& rotateZClockwise(const Layer& layer, const Angle& angle);
 
     Cube& rotateClockwiseAngle(const Layer& layer, const Angle& angle);
+
+    // Face getFace(const Layer& layer) const;
+    Face getFrontFace() const;
+    Face getBackFace() const;
+    Face getRightFace() const;
+    Face getLeftFace() const;
+    Face getTopFace() const;
+    Face getBottomFace() const;
 };
 
 

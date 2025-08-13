@@ -1,6 +1,8 @@
 #include "angle.h"
+#include "cube.h"
 
 int main()
 {
-    // auto& A = CLOCKWISE_90;
+    auto cube = Cube();
+    cube.getBackFace().print();
 }
