@@ -10,4 +10,6 @@ add_executable(magic_cube2
         angle.h
         main.cpp
         position.cpp
-        position.h)
+        position.h
+        orientation.cpp
+        orientation.h)
