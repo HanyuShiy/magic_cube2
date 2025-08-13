@@ -19,9 +19,11 @@ public:
 
     void coloring();
 
-    Cube& rotateXClockwise(const Layer& layer, const Angle& angle);
-    Cube& rotateYClockwise(const Layer& layer, const Angle& angle);
-    Cube& rotateZClockwise(const Layer& layer, const Angle& angle);
+    // Cube& rotateXClockwise(const Layer& layer, const Angle& angle);
+    // Cube& rotateYClockwise(const Layer& layer, const Angle& angle);
+    // Cube& rotateZClockwise(const Layer& layer, const Angle& angle);
+
+    Cube& rotateClockwiseAngle(const Layer& layer, const Angle& angle);
 };
 
 

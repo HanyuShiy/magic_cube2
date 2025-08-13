@@ -46,6 +46,23 @@ void ColoredCubelet::rotateZ(const Angle& angle)
     }
 }
 
+void ColoredCubelet::rotateAround(const Orientation& axis, const Angle& angle)
+{
+    if (axis == Orientation{1, 0, 0})
+    {
+        rotateX(angle);
+    }
+
+    if (axis == Orientation{0, 1, 0})
+    {
+        rotateY(angle);
+    }
+    if (axis == Orientation{0, 0, 1})
+    {
+        rotateZ(angle);
+    }
+}
+
 void ColoredCubelet::coloring(const Orientation& orientation, const Color& color)
 {
     for (auto& face : faces)

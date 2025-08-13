@@ -22,6 +22,8 @@ public:
     void rotateY(const Angle& angle) override;
     void rotateZ(const Angle& angle) override;
 
+    void rotateAround(const Orientation& axis, const Angle& angle);
+
     void coloring(const Orientation& orientation, const Color& color);
 };
 

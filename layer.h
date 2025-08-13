@@ -14,6 +14,7 @@ public:
 
     explicit Layer(const std::function<bool(const ColoredCubelet& cubelet)>& contains, const Orientation& axis);
 
+    Orientation get_axis() const;
 private:
     Orientation axis;
 };
